@@ -266,6 +266,38 @@ color:var(--sage-deep);
 margin-top:0.3rem;
 }
 
+/* ---------- GUEST MESSAGE ---------- */
+.message-frame-wrap{
+max-width:600px;
+margin:0 auto;
+padding:1.6rem;
+background:rgba(255,255,255,0.55);
+border:1px solid var(--line);
+border-radius:14px;
+backdrop-filter:blur(2px);
+box-shadow:0 22px 44px -28px rgba(194,116,108,0.45);
+}
+.guest-message-form{
+width:100%;
+height:640px;
+border:none;
+border-radius:8px;
+background:transparent;
+display:block;
+}
+.message-note{
+text-align:center;
+font-style:italic;
+font-size:0.95rem;
+color:var(--rose-deep);
+margin-top:1.4rem;
+opacity:0.85;
+}
+@media (max-width:600px){
+.guest-message-form{ height:760px; }
+.message-frame-wrap{ padding:1rem; }
+}
+
 /* ---------- closing ---------- */
 .closing{
 text-align:center;
@@ -369,6 +401,36 @@ color:rgba(90,68,81,0.55);
 <div class="detail-sub">as the evening blooms</div>
 </div>
 </div>
+</section>
+
+<section id="guest-message">
+<div class="divider">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 21s-7-4.35-9.5-8.5C.5 9 2 5 6 5c2 0 3.5 1.2 4 2.5C10.5 6.2 12 5 14 5c4 0 5.5 4 3.5 7.5C19 16.65 12 21 12 21z"/></svg>
+</div>
+<h2 class="section-title">Leave a Message for the Bride 💌</h2>
+<p class="section-sub">A few kind words to tuck away and treasure — no account needed, just your heart.</p>
+
+<div class="message-frame-wrap">
+<!--
+  PASTE YOUR GOOGLE FORM EMBED LINK BELOW.
+  How to get it:
+  1. Create a Google Form with two fields: "Guest Name (optional)" and "Message for the Bride"
+  2. In the Form editor, click the green Sheets icon to link responses to a new Google Sheet
+  3. Share that Sheet with the bride's Google account only (keep it private)
+  4. In the Form editor, click Send > the "<>" embed icon > copy the iframe src URL
+  5. Replace the src below with that URL (it will look like:
+     https://docs.google.com/forms/d/e/XXXXXXXXXXXXXXXXXXXXXXXX/viewform?embedded=true)
+-->
+<iframe
+src="PASTE_GOOGLE_FORM_EMBED_LINK_HERE"
+class="guest-message-form"
+loading="lazy"
+title="Leave a message for the bride">
+Loading…
+</iframe>
+</div>
+
+<p class="message-note">Your message will be delivered privately to the bride ✨</p>
 </section>
 
 <section class="closing">
